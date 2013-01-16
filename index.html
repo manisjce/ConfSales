@@ -32,41 +32,41 @@
 	<body onload = "holders()">
 		<!--START TOGGLE VISIBILITY OF PINS-->
 		<script>
-			$(function() {
-				$("#toggle1").click(function() { 
-					// Toggles Venues Div
-					$("#Venues").toggle();
-				});
-			});
+		    $(function () {
+		        $("#toggle1").click(function () {
+		            // Toggles Venues Div
+		            $("#Venues").toggle();
+		        });
+		    });
 
-			
-			$(function() {
-				$("#toggle2").click(function() {
-					// Toggles Lodging Div  
-					$("#Lodging").toggle();
-				});
-			});
-			
-			$(function() {
-				$("#toggle3").click(function() {
-					// Toggles Theatre Div  
-					$("#Theatre").toggle();
-				});
-			});
-			
-			$(function() {
-				$("#toggle4").click(function() {
-					// Toggles Athletics Div  
-					$("#Athletics").toggle();
-				});
-			});
-            			
-			$(function() {
-				$("#toggle5").click(function() {
-					// Toggles Dining Div  
-					$("#Dining").toggle();
-				});
-			});
+
+		    $(function () {
+		        $("#toggle2").click(function () {
+		            // Toggles Lodging Div  
+		            $("#Lodging").toggle();
+		        });
+		    });
+
+		    $(function () {
+		        $("#toggle3").click(function () {
+		            // Toggles Theatre Div  
+		            $("#Theatre").toggle();
+		        });
+		    });
+
+		    $(function () {
+		        $("#toggle4").click(function () {
+		            // Toggles Athletics Div  
+		            $("#Athletics").toggle();
+		        });
+		    });
+
+		    $(function () {
+		        $("#toggle5").click(function () {
+		            // Toggles Dining Div  
+		            $("#Dining").toggle();
+		        });
+		    });
 		</script>
 		<!--END TOGGLE VISIBILITY OF PINS-->
 
@@ -154,7 +154,7 @@
         xmlDoc = xhttp.responseXML;
 
         var x = xmlDoc.getElementsByTagName(name);
-        
+
         var html_replace = null;
         for (i = 0; i < x.length; i++) {
 
@@ -167,7 +167,7 @@
 
         }
         document.getElementById(name).innerHTML = html_replace;
-        
+
     }
 
 </script>
@@ -180,10 +180,9 @@
         xmlDoc = xhttp.responseXML;
 
         var x = xmlDoc.getElementsByTagName("Locations");
-       
-        var html_replace ="";
-        for (i = 0; i < x.length; i++) 
-        {
+
+        var html_replace = "";
+        for (i = 0; i < x.length; i++) {
 
             html_replace += "<div data-role=\"popup\"id=\"" + x[i].getElementsByTagName("Id")[0].childNodes[0].nodeValue + "\" data-overlay-theme=\"a\" data-theme=\"d\" data-corners=\"false\" data-position-to=\"window\"></div>";
 
